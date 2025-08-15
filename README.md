@@ -57,6 +57,33 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+# Library Management System - API
+
+Base URL: http://localhost:3000
+
+## Books
+- POST /api/books
+- GET /api/books
+- GET /api/books/search?q=term
+- GET /api/books/:id
+- PATCH /api/books/:id
+- DELETE /api/books/:id  (soft-delete)
+
+## Borrowers
+- POST /api/borrowers
+- GET /api/borrowers
+- GET /api/borrowers/:id
+- PATCH /api/borrowers/:id
+- DELETE /api/borrowers/:id  (soft-delete)
+
+## Borrowing
+- POST /api/borrowing/checkout   { bookId, borrowerId }
+- POST /api/borrowing/return     { bookId, borrowerId }
+- GET  /api/borrowing/borrower/:borrowerId
+- GET  /api/borrowing/overdue
+- GET  /api/borrowing
+
+
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
