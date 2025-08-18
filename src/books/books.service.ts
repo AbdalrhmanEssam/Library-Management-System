@@ -51,9 +51,9 @@ export class BooksService {
       where: [
         { title: Like(q), isActive: true },
         { author: Like(q), isActive: true },
-        { isbn: Like(q), isActive: true }
+        { isbn: Like(q), isActive: true },
       ],
-      order: { title: 'ASC' }
+      order: { title: 'ASC' },
     });
   }
 
