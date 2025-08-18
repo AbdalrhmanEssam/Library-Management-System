@@ -5,9 +5,16 @@ import { Borrowing } from '../../borrowing/entities/borrowing.entity';
 export class Borrower {
   @PrimaryGeneratedColumn()
   id: number;
-
+  
   @Column({ length: 255 })
-  name: string;
+  firstName: string;
+
+  
+  @Column({ length: 255 })
+  lastName: string;
+
+  @Column({ length: 255 , unique: true})
+  username: string;
 
   // Keep unique on column only (remove @Index() to avoid duplicate index creation)
   @Column({ length: 255, unique: true })
